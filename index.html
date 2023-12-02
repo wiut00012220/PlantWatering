@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="data-container">
+      <h1 class="data-head">Sensor Realtime Readings</h1>
+      <!-- Sensors -->
+      <div id="Sensors">
+        <div class="data-item" id="temp">
+          <h2>Temperature</h2>
+          <p class="value" id="temperature">22 &#8451;</p>
+        </div>
+        <div class="data-item" id="humid">
+          <h2>Humidity</h2>
+          <p class="value" id="humidity">10%</p>
+        </div>
+        <div class="data-item" id="moist">
+          <h2>Moisture</h2>
+          <p class="value" id="moisture">10%</p>
+        </div>
+      </div>
+      <!-- button -->
+      <div id="button">
+        <button id="pump" onclick="press()">turn off</button>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
